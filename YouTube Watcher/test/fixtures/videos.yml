@@ -1,0 +1,58 @@
+# == Schema Information
+#
+# Table name: videos
+#
+#  id                 :integer          not null, primary key
+#  title              :string
+#  url                :string
+#  view_count         :integer
+#  comment_count      :integer
+#  executed_search_id :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  like_count         :integer
+#  dislike_count      :integer
+#  favorite_count     :integer
+#  channel_name       :string
+#  youtube_id         :string
+#  published_at       :date
+#  thumbnail_url      :string
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+<% VIDEO_COUNT = 20 %>
+
+# one video set
+<% 1.upto(VIDEO_COUNT) do |i| %>
+video_set_a_<%= i %>:
+  executed_search: set_a
+  title: Video Number <%= i %>
+  url: a_url
+  view_count: <%= rand(100) %>
+  comment_count: <%= rand(100) %>
+  youtube_id: set_a<%= i %>
+<% end %>
+
+# second video set
+<% 1.upto(VIDEO_COUNT) do |i| %>
+video_set_b_<%= i %>:
+  executed_search: set_b
+  title: Video Number <%= i %>
+  url: a_url
+  view_count: <%= rand(100) %>
+  comment_count: <%= rand(100) %>
+  youtube_id: set_b<%= i %>
+<% end %>
+
+one:
+  title: MyString
+  url: MyString
+  view_count: 1
+  comment_count: 1
+
+two:
+  title: MyString
+  url: MyString
+  view_count: 1
+  comment_count: 1

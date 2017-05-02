@@ -1,0 +1,15 @@
+<table class='table'>
+  <tr>
+    <td><%= raw(@video.url) %></td>
+    <td>
+      <table>
+        <tr><td class='lead'><%= @video.title %></td></tr>
+        <tr><td><%= video_stats(@video) %></td></tr>
+        <tr><td>Channel: <%= channel(@video) %></td></tr>
+        <tr><td><%= link_to "Set Alarm for Video", '', class: 'btn btn-default', id: 'alarm-button' %>
+        <tr><td><%= link_to "Set Alarm for Channel", '', class: 'btn btn-default', id: 'alarm-button' %>
+        <tr><td><%= link_to "Set Alarm for Author", '', class: 'btn btn-default', id: 'alarm-button' %>
+      </table>
+    </td>
+  </tr>
+</table>

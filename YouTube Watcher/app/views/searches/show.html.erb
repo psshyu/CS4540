@@ -1,0 +1,24 @@
+<table class='table'>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Views</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @ys.videos.each do |video| %>
+    <tr>
+      <td>
+        <%= video.title %>
+      </td>
+      <td>
+        <%= video.view_count %>
+      </td>
+      <td>
+        <%= video.comment_count %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

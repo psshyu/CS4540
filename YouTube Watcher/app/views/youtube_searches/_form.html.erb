@@ -1,0 +1,32 @@
+<div class='search_form'>
+  <%= form_for @ys do |form| %>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><%= form.text_field :name %></td>
+        <td>
+      </tr>
+      <tr>
+        <td>Search terms:</td>
+        <td><%= form.text_field :search_terms %></td>
+        <td>
+      </tr>
+      <tr>
+        <td>Alert on New Result?:</td>
+        <td><%= form.check_box :alert_on_new_result %></td>
+        <td>
+      </tr>
+      <tr>
+        <td colspan='3'>
+          <%= form.submit 'Save', class: 'btn btn-default' %>
+          <%= form.submit 'Save and Run', class: 'btn btn-default' %>
+          <%= link_to 'Cancel', root_path, class: 'btn btn-default' %>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>
+
+<% if @include_results %>
+  <%= render 'executed_searches/results' %>
+<% end %>

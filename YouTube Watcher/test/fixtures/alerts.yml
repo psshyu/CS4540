@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: alerts
+#
+#  id                :integer          not null, primary key
+#  status            :integer
+#  delivered_at      :datetime
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  youtube_search_id :integer
+#  criterion         :integer          default("change_in_top_x")
+#  message           :string
+#  sns_message_id    :string
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  delivered_at: 2017-03-20 10:18:52
+
+two:
+  status: 1
+  delivered_at: 2017-03-20 10:18:52

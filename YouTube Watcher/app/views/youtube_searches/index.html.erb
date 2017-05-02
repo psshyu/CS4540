@@ -1,0 +1,20 @@
+<div class='results'>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Search Terms</th>
+        <th>Executed Count</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @youtube_searches.each do |yts| %>
+      <tr>
+        <td><%= yts.name %></td>
+        <td><%= yts.search_terms %></td>
+        <td><%= yts.executed_searches.count %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

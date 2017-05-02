@@ -1,0 +1,74 @@
+Rails:
+  Enabled: true
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'tryout/**/*'
+
+Style/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/PredicateName:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 130
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Enabled: false
+
+Rails/Validation:
+  Exclude:
+    - 'app/models/*'
+
+Style/BracesAroundHashParameters:
+  Exclude:
+    - 'lib/tasks/*.rake'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/test_helper.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'app/**/*'
+
+Style/EmptyLines:
+  Exclude:
+    - 'Gemfile'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/SpaceInsideBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/StringLiterals:
+  Include:
+    - 'Gemfile'
+    - 'app/views/**/*'
+    - 'test/**/*'
+
+Style/TrailingCommaInLiteral:
+  Exclude:
+    - 'lib/tasks/auto_annotate_models.rake'

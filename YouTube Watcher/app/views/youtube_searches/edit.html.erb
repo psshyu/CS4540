@@ -1,0 +1,7 @@
+<% if @ys.errors.present? %>
+  <div class='validation_errors'>
+    <%= @ys.errors.full_messages %>
+  </div>
+<% end %>
+
+<%= render 'form' %>

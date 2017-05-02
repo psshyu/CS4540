@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  first_name      :string
+#  last_name       :string
+#  email           :string
+#  admin           :boolean
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  txt_number      :string
+#  verified        :boolean          default(FALSE)
+#  password_digest :string
+#
+# Indexes
+#
+#  index_users_on_email  (email) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+michael:
+  first_name: Michael
+  last_name: Corvinus
+  email: hybrid@underworld.com
+  # assume password = "foobar"
+  password_digest: <%= User.digest('foobar') %>
+  admin: false
+
+viktor:
+  first_name: Viktor
+  last_name: is_evil
+  email: liar@underwold.com
+  password_digest: <%= User.digest('foobar') %>
+  admin: false

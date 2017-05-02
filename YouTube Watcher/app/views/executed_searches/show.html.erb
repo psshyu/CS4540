@@ -1,0 +1,26 @@
+<h2>Youtube Search Results</h2>
+<%= form_tag executed_search_path(@eys), method: :patch do %>
+  <table class='table'>
+    <tr>
+      <td>
+        <table>
+          <tr><td>Name: <%= @eys.youtube_search.name %></td></tr>
+          <tr><td>Search terms: <%= @eys.youtube_search.search_terms %></td></tr>
+          <tr><td>
+            <%= submit_tag "Rerun", class: 'btn btn-default' %>
+            <%= link_to "See all runs", youtube_search_path(@eys.youtube_search), class: 'btn btn-default' %>
+          </td></tr>
+
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr><td>Started at: <%= time_ago_in_words(@eys.started_at) unless @eys.started_at.nil? %> ago </td></tr>
+          <tr><td>Finished at: <%= time_ago_in_words(@eys.finished_at) unless @eys.finished_at.nil? %> ago </td></tr>
+          <tr><td>Duration: <%= (@eys.finished_at - @eys.started_at).round(1) unless (@eys.finished_at.nil? || @eys.started_at.nil?)%> seconds </td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+<% end %>
+<%= render 'results' %>

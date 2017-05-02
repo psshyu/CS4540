@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: youtube_searches
+#
+#  id                  :integer          not null, primary key
+#  name                :string
+#  search_terms        :string
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  user_id             :integer
+#  alert_on_new_result :boolean          default(FALSE)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+farmall_tractors:
+  name: Farmall Tractor Videos
+  search_terms: farmall tractors
+  user: michael
+  alert_on_new_result: true
+
+vampires:
+  name: Vampire Videos
+  search_terms: vampires
+  user: michael
+  alert_on_new_result: true
+
+learning_rails:
+  name: Learning Rails Videos
+  search_terms: ruby on rails
+  user: victor
+  alert_on_new_result: false

@@ -1,0 +1,21 @@
+// Place all the styles related to the Video controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.stats {
+}
+.stat {
+  float: left;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  margin-right: 5px;
+  .stat-value {
+    padding-right: 3px
+  }
+}
+
+#alarm-button {
+  margin-top: 5px;
+}

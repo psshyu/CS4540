@@ -1,0 +1,30 @@
+<div class='results'>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th><span class='glyphicon glyphicon-eye-open' title='View Count'></span></th>
+        <th><span class='glyphicon glyphicon-comment' title='Comment Count'></span></th>
+        <th><span class='glyphicon glyphicon-thumbs-up' title='Like Count'></span></th>
+        <th><span class='glyphicon glyphicon-thumbs-down' title='Dislike Count'></span></th>
+        <th><span class='glyphicon glyphicon-bullhorn' title='Channel'></span></th>
+        <th><span class='glyphicon glyphicon-cloud-upload' title='Published'></span></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @eys.videos.each do |video| %>
+      <tr>
+        <td><%= image_tag(video.thumbnail_url, size: '30x30') if video.thumbnail_url %></td>
+        <td><%= link_to video.title, video %></td>
+        <td><%= video.view_count %></td>
+        <td><%= video.comment_count %></td>
+        <td><%= video.like_count %></td>
+        <td><%= video.dislike_count %></td>
+        <td><%= video.channel_name %></td>
+        <td><%= video.published_at %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

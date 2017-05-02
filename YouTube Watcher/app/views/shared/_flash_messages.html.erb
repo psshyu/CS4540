@@ -1,0 +1,21 @@
+<% if flash.keys.present? %>
+  <div class="flash">
+    <% if flash[:notice] %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:error] %>
+      <div class="error">
+        <%= flash[:error] %>
+      </div>
+    <% elsif flash[:danger] %>
+      <div class="danger">
+        <%= flash[:danger] %>
+      </div>
+    <% else %>
+      <div class="unknown">
+        <%= flash.inspect %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

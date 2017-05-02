@@ -1,0 +1,14 @@
+<div class="nice-box">
+  <div class="header">System Activity</div>
+  <div class="contents">
+      <table class="table">
+        <% current_user.executed_searches.most_recent(10).each do |search| %>
+          <tr>
+            <td><%= search_type(search) %></td>
+            <td><%= link_to search.name, executed_search_path(search) %></td>
+            <td><%= time_ago_in_words(search.finished_at) unless search.finished_at.blank? %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+</div>

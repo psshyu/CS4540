@@ -1,0 +1,95 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'colors';
+
+/* universal */
+
+body {
+  padding-top: 10px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.app-header {
+  padding-bottom: 20px;
+  .icon {
+    float: left;
+    padding-bottom: 10px;
+  }
+  .name {
+    font-size: 30px;
+    font-variant: small-caps;
+    color: $blue;
+  }
+  .subname {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  ul.top-links {
+    li {
+      display: inline;
+    }
+    margin: 0px;
+    padding-top: 20px;
+  }
+}
+
+.nice-box {
+  .header {
+    width: 300px;
+    height: 50px;
+    padding: 8px 10px 10px 8px;
+    background-color: $grey1;
+    float: left;
+    color: $blue;
+    font-weight: normal;
+    font-size: 15px;
+  }
+  .contents {
+    font-weight: lighter;
+  }
+}
+
+#error_explanation {
+  color: $red;
+  ul {
+    color: $red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.flash {
+  .notice {
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    background: $purple;
+    color: $orange;
+  }
+  .danger {
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    background: $rose;
+    color: $orange;
+  }
+}

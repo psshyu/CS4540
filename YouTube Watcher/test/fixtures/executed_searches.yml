@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: executed_searches
+#
+#  id                 :integer          not null, primary key
+#  youtube_search_id  :integer
+#  triggered_by       :integer
+#  started_at         :datetime
+#  finished_at        :datetime
+#  checked_for_alerts :boolean
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+set_a:
+  youtube_search_id: 1
+  triggered_by: 1
+  started_at: 2017-04-02 08:46:27
+  finished_at: 2017-04-02 08:46:27
+  checked_for_alerts: false
+
+set_b:
+  youtube_search_id: 1
+  triggered_by: 1
+  started_at: 2017-04-03 08:46:27
+  finished_at: 2017-04-03 08:46:27
+  checked_for_alerts: false

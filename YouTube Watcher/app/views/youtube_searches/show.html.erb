@@ -1,0 +1,22 @@
+<h2>Youtube Search</h2>
+<table class='table'>
+  <tr><td>Name: <%= @ys.name %></td></tr>
+  <tr><td>Search terms: <%= @ys.search_terms %></td></tr>
+  <tr><td>
+    <% if @ys.alert.present? %>
+      <%= content_tag :span, '', class: 'glyphicon glyphicon-volume-up' %> Alert is ON
+    <% else %>
+      <%= content_tag :span, '', class: 'glyphicon glyphicon-volume-off' %> Alert is OFF
+    <% end %>
+  </td></tr>
+</table>
+<h3>Runs:</h3>
+<table class='table'>
+  <% @ys.executed_searches.each do |es| %>
+    <tr>
+      <td><%= search_type(es) %></td>
+      <td><%= time_ago_in_words(es.finished_at) unless es.finished_at.blank? %> ago</td>
+      <td><%= link_to 'See results', executed_search_path(es) %></td>
+    </tr>
+  <% end %>
+</table>

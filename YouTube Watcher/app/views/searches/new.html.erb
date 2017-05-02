@@ -1,0 +1,9 @@
+<%= form_for @ys do |form| %>
+  <table>
+    <tr>
+      <td>Search terms:</td>
+      <td><%= form.text_field :search_terms %></td>
+    </tr>
+  </table>
+  <%= form.submit 'Search!' %>
+<% end %>
