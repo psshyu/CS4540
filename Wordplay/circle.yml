@@ -1,0 +1,7 @@
+machine:
+  ruby:
+    version: 2.3.1
+
+test:
+  override:
+    - ruby ./code/game_helper_test.rb

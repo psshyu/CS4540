@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  first_name :string
+#  last_name  :string
+#  email      :string
+#  admin      :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_users_on_email  (email) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: mystring@email2.com
+  admin: false
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: mystring@eamil2.com
+  admin: false

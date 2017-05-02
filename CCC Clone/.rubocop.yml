@@ -1,0 +1,4 @@
+inherit_from: ./config/rubocop/rules.yml
+# Because developing on Windows via RubyMine causes Rubocop to throw a massive fit
+EndOfLine:
+  Enabled: false

@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 2.3.1
+  - ruby
+before_script: 
+  - bundle exec rake db:prepare --trace
